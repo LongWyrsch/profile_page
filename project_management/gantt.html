@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="icon" href="./icongantt.png" />
+	</head>
+	<body>
+		<div class="chartContainer">
+			<pre class="mermaid">
+                gantt
+                title Grocery list
+                dateFormat YYYY-MM-DD
+                axisFormat %d
+                tickInterval 1day
+            
+                %% [Git] --> git commit --> blue
+                %% ** --> notes in Obsidian --> bold
+
+                section UI/UX design
+                    prototype: done, prototype, 2023-02-13, 36h
+
+                section Front end 
+                    [Git] Initialize Next project: innepr, after prototype, 12h
+                    %% ~ ~ ~ ~ ~ ~ ==> H E R E <== ~ ~ ~ ~ ~ ~ ~ 
+                    [Git] Set up GitHub repo: sugr, after prototype, 12h
+                    [Git] Add normalize.css and font: anaf, after prototype, 12h
+                    [Git] Install MUI and set up colors: inmuico, after prototype, 12h
+                    [Git] Add ligth dark mode: aldm, after inmuico, 6h
+                    [Git] Install i18next and set up languages: ininext, after aldm, 6h
+                    [Git] Add Title component: atic, after ininext, 6h
+                    [Git] Add Profile component: aprc, after atic, 6h
+                    [Git] Add Languages component: alac, after aprc, 6h
+                    [Git] Add Education component: aedc, after alac, 6h
+                    [Git] Add Portfolio component: aorc, after aedc, 6h
+                    [Git] Add Skills component: askc, after aorc, 6h
+                    [Git] Add Experience component: aexc, after askc, 6h
+                    [Git] Add Timeline component: atimec, after aexc, 6h
+                    [Git] Add dynamic TOC: adddytoc, after atimec, 6h
+                    [Git] Add language picker: alanp, after adddytoc, 6h
+                    [Git] Add button to download CV: abtdcv, after alanp, 6h
+                    [Git] Show message for smaller screens: smfss, after abtdcv, 6h
+
+                section Deploy
+                    Deploy on Netlify: dpn, after smfss, 12h
+                    Link to my custom domain longwyrsch.com: ltmcdl, after dpn, 12h
+            </pre>
+		</div>
+		<script type="module">
+			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+			mermaid.initialize({
+				startOnLoad: true,
+			});
+		</script>
+	</body>
+	<script src="./myscript.js"></script>
+</html>

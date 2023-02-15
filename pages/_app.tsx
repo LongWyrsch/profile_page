@@ -8,17 +8,20 @@ import { createContext, useMemo, useState } from 'react'
 import { CssBaseline, PaletteMode } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
+// libs
+import { appWithTranslation } from 'next-i18next'
+
 // other
 import { getDesignTokens } from '../styles/theme'
 
+
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
-export default function App({ Component, pageProps }: AppProps) {
-	
-  // The theme state. Whenever its value changes, "const theme" is updated with corresponding values.
-  const [mode, setMode] = useState<PaletteMode>('light')
+function App({ Component, pageProps }: AppProps) {
+	// The theme state. Whenever its value changes, "const theme" is updated with corresponding values.
+	const [mode, setMode] = useState<PaletteMode>('light')
 
-  // The object which useContext will receive. I contains the function to toggle the theme.
+	// The object which useContext will receive. I contains the function to toggle the theme.
 	const colorMode = useMemo(
 		() => ({
 			toggleColorMode: () => setMode((prev) => (prev === 'light' ? 'dark' : 'light')),
@@ -26,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		[]
 	)
 
-  // Your customized theme, passed by the ThemeProvider.
+	// Your customized theme, passed by the ThemeProvider.
 	const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
 	return (
@@ -39,3 +42,5 @@ export default function App({ Component, pageProps }: AppProps) {
 		</ColorModeContext.Provider>
 	)
 }
+
+export default appWithTranslation(App)

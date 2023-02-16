@@ -448,7 +448,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
 				main: materialDesign.primary
 			},
 			secondary: {
-				main: materialDesign.tones.secondary[60]
+				main: materialDesign.tones.secondary[80]
 			}			
 		}
 	}

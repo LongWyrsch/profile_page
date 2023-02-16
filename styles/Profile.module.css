@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.icon {
+    width: 40px;
+    height: 20px;
+}
+
+.list {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0
+}

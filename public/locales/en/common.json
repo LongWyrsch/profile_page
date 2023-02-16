@@ -1,5 +1,15 @@
 {
-    "hi": "Hi! I'm Long Wyrsch.",
+    "hi": "Hi! I'm ",
+    "long": " Long Wyrsch",
     "credit1": "Photo by",
-    "credit2": "on"
+    "credit2": "on",
+    "dev": "Software Developer",
+    "resume": "Download my resume",
+    "email": "long.nqw@gmail.com",
+    "location": "Düsseldorf, Germany",
+    "citizenship": "Canadian & Swiss citizen",
+    "born": "1988 - Montreal, Canada",
+    "enlgish":"English",
+    "french":"French",
+    "german":"German (B2/C1)"
 }

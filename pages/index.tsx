@@ -8,7 +8,6 @@ import { ColorModeContext } from './_app'
 
 // Components
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 
 // Styles
@@ -27,13 +26,15 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 // other
 import bannerImage from 'public/james-harrison-vpOeXr5wmR4-unsplash.jpg'
 import LanguagePicker from '@/components/languagePicker'
+import Header from '@/components/Header'
+import Profile from '@/components/Profile'
+import Languages from '@/components/Languages'
+import Education from '@/components/Education'
 
 export default function Home() {
 	const theme = useTheme()
 
 	const colorMode = useContext(ColorModeContext)
-
-	const { locale, locales, push } = useRouter()
 
 	const { t } = useTranslation('common')
 
@@ -62,19 +63,14 @@ export default function Home() {
 					</IconButton>
 					<LanguagePicker/>
 				</div>
-				{/* <div className={styles.languagePicker}>
-				</div> */}
-
-				<Button>{t('')}</Button>
-				<div>{locale}</div>
-				{t('hi')}
-				{locales?.map((l) => (
-					<div key={l}>
-						<Link href={'/'} locale={l}>
-							{l}
-						</Link>
+				<div className={styles.resumeContainer}>
+					<Header/>
+					<div className={styles.profileLanguagesEducation}>
+						<Profile/>
+						<Languages/>
+						<Education/>
 					</div>
-				))}
+				</div>
 			</main>
 		</>
 	)

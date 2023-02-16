@@ -1,7 +1,9 @@
 .bannerContainer {
     height: 40vh;
     width: 100%;
-    position: relative
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .bannerImage {
@@ -20,22 +22,12 @@
 
 .bannerContainer > span > * {
     color: inherit;
-    /* text-decoration: none !important; */
 }
 
 .themeToggle {
-    /* position: absolute; */
-    /* top: 10px; */
-    /* right: 200px; */
     color: white;
     background-color: #535353;
 }
-
-/* .languagePicker{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-} */
 
 .languageTheme {
     position: absolute;
@@ -45,4 +37,22 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+.resumeContainer {
+    margin: 29vh auto 0;
+    min-width: 900px;
+    width: 60%;
+}
+
+
+.profileLanguagesEducation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* gap: 5px; */
+}
+
+.profileLanguagesEducation > * {
+    width: 30%;
 }

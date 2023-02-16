@@ -1,6 +1,6 @@
 {
-    "hi": "Hi! I'm ",
-    "long": " Long Wyrsch",
+    "hi": "Hi! I'm",
+    "long": "Long Wyrsch",
     "credit1": "Photo by",
     "credit2": "on",
     "dev": "Software Developer",
@@ -11,5 +11,8 @@
     "born": "1988 - Montreal, Canada",
     "enlgish":"English",
     "french":"French",
-    "german":"German (B2/C1)"
+    "german":"German (B2/C1)",
+    "look": "Have a look at my full-stack",
+    "app": "portfolio app",
+    "thispage": "This page was written with Typescript using Next.js"
 }

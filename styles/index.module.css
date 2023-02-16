@@ -39,8 +39,12 @@
     gap: 30px;
 }
 
+main .resumeContainer:nth-child(3) {
+    margin-top: 29vh !important;
+}
+
 .resumeContainer {
-    margin: 29vh auto 0;
+    margin: 0 auto;
     min-width: 900px;
     width: 60%;
 }
@@ -50,9 +54,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* gap: 5px; */
+    margin-top: 30px;
 }
 
 .profileLanguagesEducation > * {
-    width: 30%;
+    /* width: 30%; */
+    /* border: 1px solid red; */
+}
+
+.portfolioBanner {
+    width: 100%;
 }

@@ -22,7 +22,7 @@ const Header = () => {
 				<div className={styles.shadow} style={{ backgroundColor: theme.tones.neutral[50] }}></div>
 			</div>
 			<div className={styles.rightSide}>
-				<div className={styles.name}>{t('hi')}<b>{t('long')}</b>.</div>
+				<div className={styles.name}>{t('hi')} <b>{t('long')}</b>.</div>
                 <div className={styles.highlight}></div>
 				<div className={styles.buttons}>
 					<div className={styles.leftButtons}>

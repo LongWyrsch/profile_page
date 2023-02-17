@@ -1,0 +1,14 @@
+.highlight {
+	position: absolute;
+	top: 35px;
+	left: 0px;
+	height: 38%;
+	width: 100%;
+	transition: 1000ms ease-in-out;
+    background-size: 200%;
+}
+
+.visible {
+    background-position: -100%;
+}
+

@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { forwardRef, Ref } from 'react'
 import Title from './Title'
 import { Icon } from '@iconify/react'
 import { useTranslation } from 'next-i18next'
 import styles from 'styles/Profile.module.css'
+import { ScriptProps } from 'next/script'
 
 const Profile = () => {
 	const { t } = useTranslation()
 
 	return (
 		<div>
-			<Title title="Profile"></Title>
+			<Title title="Profile" ></Title>
 			<ul className={styles.list}>
 				<li>
 					<div className={styles.row}>
@@ -35,5 +36,6 @@ const Profile = () => {
 		</div>
 	)
 }
+
 
 export default Profile

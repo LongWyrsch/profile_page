@@ -10,10 +10,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 // libs
 import { appWithTranslation } from 'next-i18next'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 // other
 import { getDesignTokens } from '../styles/theme'
-
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
@@ -36,7 +36,9 @@ function App({ Component, pageProps }: AppProps) {
 		<ColorModeContext.Provider value={colorMode}>
 			<ThemeProvider theme={theme}>
 				<CssBaseline>
-					<Component {...pageProps} />
+					<ParallaxProvider>
+						<Component {...pageProps} />
+					</ParallaxProvider>
 				</CssBaseline>
 			</ThemeProvider>
 		</ColorModeContext.Provider>

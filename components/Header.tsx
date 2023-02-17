@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Ref } from 'react'
 import headshot from 'public/headshot.jpeg'
 import styles from 'styles/Header.module.css'
 import Image from 'next/image'
@@ -7,11 +7,16 @@ import { useTranslation } from 'next-i18next'
 import DownloadIcon from '@mui/icons-material/Download'
 import { Icon } from '@iconify/react'
 import { useRouter } from 'next/router'
+import { useInView } from 'react-intersection-observer'
+
 
 const Header = () => {
 	const theme = useTheme()
 	const { t } = useTranslation('common')
 	const {locale} = useRouter()
+
+	const { ref: highlightRef, inView: highlightIsVisible } = useInView({delay: 2000})
+
 
 	const copyText = () => {
 		navigator.clipboard.writeText('long.nqw@gmail.com')
@@ -34,8 +39,8 @@ const Header = () => {
 				<div className={styles.shadow} style={{ backgroundColor: theme.tones.neutral[50] }}></div>
 			</div>
 			<div className={styles.rightSide}>
-				<div className={styles.name} style={{fontSize: locale==='en'? '4rem': '3rem'}}>{t('hi')} <b>{t('long')}</b>.</div>
-                <div className={styles.highlight} style={nameHighlightPosition}></div>
+				<div className={styles.name} style={{fontSize: locale==='en'? '4rem': '3rem'}}>{t('hi')} <b>{t('long')}</b></div>
+                <div className={`${styles.highlight} ${highlightIsVisible&& styles.visible}`} style={nameHighlightPosition} ref={highlightRef}></div>
 				<div className={styles.buttons}>
 					<div className={styles.leftButtons}>
 						<div className={styles.developer}>{t('dev')}</div>

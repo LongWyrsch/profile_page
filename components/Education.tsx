@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Ref } from 'react'
 import Title from './Title'
 import { Icon } from '@iconify/react'
 import { useTranslation } from 'next-i18next'

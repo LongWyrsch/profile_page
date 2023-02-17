@@ -52,7 +52,13 @@
 .highlight {
     position: absolute;
     z-index: -1;
-    background-color: grey;
+    transition: 1000ms ease-in-out;
+    background-size: 200%;
+    background-image: linear-gradient(to right, transparent 50%, grey 50%)
+}
+
+.visible {
+    background-position: -100%;
 }
 
 .name,

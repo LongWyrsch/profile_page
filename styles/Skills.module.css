@@ -34,12 +34,12 @@
     transition: 100ms ease-in-out;
 }
 
-.topRow > div > *.tech:nth-child(1):hover,
+/* .topRow > div > *.tech:nth-child(1):hover,
 .bottomRow > div > *.tech:nth-child(1):hover {
     position: relative;
     height: 80px;
     width: 80px;
-}
+} */
 
 .bottomRow {
     padding: 0 40px;

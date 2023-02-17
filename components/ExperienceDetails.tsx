@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { useTranslation } from 'next-i18next'
 import { useTheme } from '@mui/material'
 import { Icon } from '@iconify/react'
 import grocerylists from 'public/grocerylists.png'
 import Image from 'next/image'
 import styles from 'styles/ExperienceDetails.module.css'
+import { useInView } from 'react-intersection-observer'
+import { HoverContext } from './Experience'
 
 
 export type ExperienceDetailsProps = {
@@ -21,27 +23,42 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 	const { t } = useTranslation()
 	const theme = useTheme()
 
-    const topCard = {
-        backgroundColor: employer.includes('McGill')? 'white' : employer.includes('Codecademy')? theme.tones.secondary[95] : 'none',
-        border: employer.includes('McGill') || employer.includes('Codecademy')? '1px solid black' : 'none',
-    }
+	const topCard = {
+		backgroundColor: employer.includes('McGill') ? theme.materialDesign.tones.neutral[95] : employer.includes('Codecademy') ? theme.tones.secondary[95] : 'none',
+		color: employer.includes('McGill') ? theme.materialDesign.onBackground : employer.includes('Codecademy') ? 'black' : 'none',
+		border: employer.includes('McGill') || employer.includes('Codecademy') ? `1px solid ${theme.tones.neutral[30]}` : 'none',
+	}
 
+	const { ref: experienceRef, inView: experienceIsVisible } = useInView({ threshold: 1, rootMargin: '0px 0px -50px 0px', triggerOnce: true }) //, triggerOnce: true
+
+	const hoverContext = useContext(HoverContext)
+
+	const enterHandler = () => {
+		hoverContext({experience: employer, isHovered: true})
+	}
+	const leaveHandler = () => {
+		hoverContext({experience: employer, isHovered: false})
+	}
 
 	return (
-		<div style={{ display: 'flex', position: 'absolute', top: height }} className={styles.wrapper}>
-			<div style={{ minHeight: '100%', marginRight: '10px', border: !employer.includes('McGill') && !employer.includes('Codecademy')? `1px solid ${theme.materialDesign.onSurface}`:'none'}}></div>
-			<div className={employer.includes('McGill') || employer.includes('Codecademy')? styles.topCard : ""} style={topCard}>
-				<div style={{ display: 'flex'}}>
-					{eduIcon && <Icon icon="zondicons:education" width={30} style={{marginRight: '10px'}} />}
+		<div style={{ display: 'flex', position: 'absolute', top: height }} className={`${styles.wrapper} ${experienceIsVisible && styles.visible}`} ref={experienceRef} onMouseEnter={enterHandler} onMouseLeave={leaveHandler}>
+			<div
+				style={{ minHeight: '100%', marginRight: '10px', border: !employer.includes('McGill') && !employer.includes('Codecademy') ? `1px solid ${theme.materialDesign.onSurface}` : 'none' }}
+			></div>
+			<div className={employer.includes('McGill') || employer.includes('Codecademy') ? styles.topCard : ''} style={topCard}>
+				<div style={{ display: 'flex' }}>
+					{eduIcon && <Icon icon="zondicons:education" width={30} style={{ marginRight: '10px' }} />}
 					<div>
 						<div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{title}</div>
 						<div style={{ whiteSpace: 'pre' }}>
 							{employerLink.includes('grocerylists') && t('visit')}
-							<a href={employerLink} style={{color: theme.materialDesign.primary}}>{employer}</a>
+							<a href={employerLink} style={{ color: theme.materialDesign.primary }}>
+								{employer}
+							</a>
 							{employer === 'Mcgill University' && t('montreal')}
 						</div>
 						<div>{dates}</div>
-						<ul style={{margin: '0'}}>
+						<ul style={{ margin: '0' }}>
 							{tasks?.map((task, i) => (
 								<li key={i}>{task}</li>
 							))}
@@ -109,8 +126,7 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 					</div>
 				)}
 			</div>
-            <div className={employer.includes('McGill') || employer.includes('Codecademy')? styles.shadow : styles.discard}>
-            </div>
+			<div className={employer.includes('McGill') || employer.includes('Codecademy') ? styles.shadow : styles.discard} style={{ backgroundColor: theme.tones.neutral[30] }}></div>
 		</div>
 	)
 }

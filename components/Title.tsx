@@ -9,7 +9,7 @@ type TitleProps = {
 
 const Title = forwardRef<HTMLDivElement, TitleProps>(({ title }, ref) => {
 	const theme = useTheme()
-	const { ref: highlightRef, inView: highlightIsVisible } = useInView({ delay: 2000, triggerOnce: true })
+	const { ref: highlightRef, inView: highlightIsVisible } = useInView({ delay: 500, triggerOnce: true })
 
 	return (
 		<div style={{ position: 'relative', width: 'fit-content', paddingLeft: '3px', paddingRight: '20px' }}>

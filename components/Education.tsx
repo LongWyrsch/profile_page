@@ -10,8 +10,8 @@ const Education = () => {
     const theme = useTheme()
 	return (
 		<div>
-			<Title title="Education"></Title>
-			<div style={{margin: '10px 10px'}}>Bachelor of Civil Engineering</div>
+			<Title title={t('education')}></Title>
+			<div style={{margin: '10px 10px'}}>{t('bach')}</div>
             <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 70 192.756 60" style={{marginLeft: '10px'}}>
                 <g>
                     <path style={{fill: 'none'}} d="M0 0h192.756v192.756H0V0z"/>

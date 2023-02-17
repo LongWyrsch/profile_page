@@ -14,7 +14,7 @@ const Portfolio = () => {
 
 	return (
 		<div style={{margin: '50px 0', padding: '40px 0'}}>
-			<Title title="Portfolio"></Title>
+			<Title title={t('portfolio')}></Title>
 			<div style={{ display: 'flex', gap: '80px' }}>
 				<div style={{ marginTop: '40px', textAlign: 'center', whiteSpace: 'pre', fontSize: '1.5rem', margin: '0 auto' }}>
 					<b>{t('look')} </b>

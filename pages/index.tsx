@@ -50,7 +50,8 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{/* <link rel="icon" href="/favicon.ico" /> */}
 			</Head>
-			<main>
+			<div className={styles.smallScreen}>{t('smallScreen')}</div>
+			<main className={styles.main}>
 				<div className={styles.bannerContainer}>
 					<Image alt="laptop" src={bannerImage} className={styles.bannerImage}></Image>
 					<span>

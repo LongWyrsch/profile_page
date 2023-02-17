@@ -118,9 +118,9 @@
 
 .highlight {
     height: 40px;
-    width: 350px;
+    width: 370px;
     position: absolute;
     top: 585px;
-    right: 250px;
+    right: 230px;
     z-index: -1;
 }

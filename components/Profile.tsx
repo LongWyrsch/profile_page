@@ -10,7 +10,7 @@ const Profile = () => {
 
 	return (
 		<div>
-			<Title title="Profile" ></Title>
+			<Title title={t('profile')} ></Title>
 			<ul className={styles.list}>
 				<li>
 					<div className={styles.row}>

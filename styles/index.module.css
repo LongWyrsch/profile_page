@@ -1,3 +1,22 @@
+.smallScreen {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        display: none;
+    }
+    
+    .smallScreen {
+        display: block;
+        margin: 150px auto;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+
+
 .bannerContainer {
     height: 40vh;
     width: 100%;
@@ -55,6 +74,7 @@ main .resumeContainer:nth-child(3) {
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 30px;
+    gap: 10px;
 }
 
 .profileLanguagesEducation > * {

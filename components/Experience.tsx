@@ -99,7 +99,7 @@ const Experience = () => {
 
 	return (
 		<div className={styles.experienceWrapper}>
-			<Title title="Experience"></Title>
+			<Title title={t('experience')}></Title>
 			<div className={styles.timelineContainer}>
 				<div className={styles.timeline}>
 					{years.map((year) => (
@@ -164,12 +164,219 @@ const Experience = () => {
 
 export default Experience
 
-const experiencesDE: ExperienceDetailsProps[] = []
-const experiencesFR: ExperienceDetailsProps[] = []
+const experiencesDE: ExperienceDetailsProps[] = [
+	{
+		title: 'Erstes Full-Stack-Portfolio-Projekt',
+		employer: 'mygrocerylists.netlify.app',
+		employerLink: 'https://mygrocerylists.netlify.app',
+		height: 0,
+		eduIcon: false,
+	},
+	{
+		title: 'Full-Stack Engineering Kurs',
+		employer: 'Codecademy',
+		employerLink: 'https://join.codecademy.com/learn/paths/full-stack-engineer-career-path/',
+		dates: '(4.2022 - 11.2022)',
+		height: 200,
+		eduIcon: true,
+	},
+	{
+		title: 'Entwicklungsingenieur',
+		employer: 'Nichias',
+		employerLink: 'https://www.nichiascorp.com/nichias-E/',
+		dates: '(4.2019 - 3.2022)',
+		tasks: [
+			'Konstruktion von Kfz-Sekundärdichtungen mit Creo',
+			'Beteiligt am Ausschreibungsprozess',
+			'Meetings mit Kunden über Design-Iterationen'
+		],
+		height: 350,
+		eduIcon: false,
+	},
+	{
+		title: 'Praktikant Softwareentwickler',
+		employer: 'Cadida Software',
+		employerLink: 'https://www.cadida.de/',
+		dates: '(11.2018 - 2.2019)',
+		tasks: ['C#, XML', 'IOS App-Entwicklung für das iPad'],
+		height: 590,
+		eduIcon: false,
+	},
+	{
+		title: 'Naturwissenschafts-Lehrer',
+		employer: 'Assumption Kokusai High School',
+		employerLink: 'https://www.assumption.ed.jp/jsh/',
+		dates: '(3.2017-3.2018)',
+		tasks: [
+			'Naturwissenschaften, Biologie, Chemie und Englisch',
+			'Koordination mit japanischen Wissenschafts-/Englischlehrern'
+		],
+		height: 750,
+		eduIcon: false,
+	},
+	{
+		title: 'Lehrer für Naturwissenschaften/Englisch Camp',
+		employer: 'ISA',
+		employerLink: 'https://www.isa.co.jp/',
+		dates: '(6.2015-8.2018)',
+		tasks: [
+			'Freiberuflich',
+			'Jede Woche verschiedene Schulen in ganz Japan',
+			'3-5 Tage Intensivprogramme',
+			'High school, Gruppen von 10-50 Schülern'
+		],
+		height: 940,
+		eduIcon: false,
+	},
+	{
+		title: 'Englisch-Lehrassistent',
+		employer: 'Oguhachiman Junior High School',
+		employerLink: 'https://www.aen.arakawa.tokyo.jp/OGUHACHIMAN-J/',
+		dates: '(4.2015-3.2016)',
+		tasks: [
+			'22 Unterrichtsstunden/Woche',
+			'470 Schüler, 1 Gruppe mit besonderen Bedürfnissen'
+		],
+		height: 1200,
+		eduIcon: false,
+	},
+	{
+		title: 'Junior-Ingenieur',
+		employer: 'Dessau (jetzt Stantec)',
+		employerLink: 'https://www.stantec.com/en',
+		dates: '(9.2012-10.2014)',
+		tasks: [
+			'Planung von Strom- und Telekommunikationsnetzen',
+			'Entwurf von Versorgungsmasten und Schächten',
+			'Blaupausen-Zeichnungen auf AutoCAD'
+		],
+		height: 1430,
+		eduIcon: false,
+	},
+	{
+		title: 'Bachelor in Bauingenieurwesen',
+		employer: 'McGill University',
+		employerLink: 'https://www.mcgill.ca/',
+		dates: '(9.2007 - 4.2012)',
+		height: 1700,
+		eduIcon: true,
+	},
+	{
+		title: 'Praktikant-Infrastruktur',
+		employer: 'AMT (jetzt EXO)',
+		employerLink: 'https://exo.quebec/en',
+		dates: '(5.2010-4.2011)',
+		tasks: [
+			'Blaupausenzeichnungen auf AutoCAD',
+			'Programmierte Dateneingabe',
+			'Vermessung',
+			'Technische Spezifikationen',
+			'Evaluierung des Energieverbrauchs'
+		],
+		height: 1900,
+		eduIcon: false,
+	},
+]
+
+
+const experiencesFR: ExperienceDetailsProps[] = [
+	{
+		title: 'Premier projet portfolio full-stack',
+		employer: 'mygrocerylists.netlify.app',
+		employerLink: 'https://mygrocerylists.netlify.app',
+		height: 0,
+		eduIcon: false,
+	},
+	{
+		title: 'Cours d\'ingénierie Full-Stack',
+		employer: 'Codecademy',
+		employerLink: 'https://join.codecademy.com/learn/paths/full-stack-engineer-career-path/',
+		dates: '(4.2022 - 11.2022)',
+		height: 200,
+		eduIcon: true,
+	},
+	{
+		title: 'Ingénieur en conception automobile',
+		employer: 'Nichias',
+		employerLink: 'https://www.nichiascorp.com/nichias-E/',
+		dates: '(4.2019 - 3.2022)',
+		tasks: ['Conception de joints secondaires automobiles avec Creo', 'Impliquation dans le processus d\'appel d\'offres', 'Rencontres avec le client sur les itérations de conception'],
+		height: 350,
+		eduIcon: false,
+	},
+	{
+		title: 'Stagiaire Développeur Logiciel',
+		employer: 'Cadida Software',
+		employerLink: 'https://www.cadida.de/',
+		dates: '(11.2018 - 2.2019)',
+		tasks: ['C#, XML', 'Développement d\'applications IOS avec Xamarin'],
+		height: 590,
+		eduIcon: false,
+	},
+	{
+		title: 'Professeur de Chimie & Biologie',
+		employer: 'Assumption Kokusai High School',
+		employerLink: 'https://www.assumption.ed.jp/jsh/',
+		dates: '(3.2017-3.2018)',
+		tasks: ['Science, biologie, chimie et anglais', 'Coordination avec les professeurs japonais de science/anglais'],
+		height: 750,
+		eduIcon: false,
+	},
+	{
+		title: 'Professeur de camps de science et d\'anglais',
+		employer: 'ISA',
+		employerLink: 'https://www.isa.co.jp/',
+		dates: '(6.2015-8.2018)',
+		tasks: [
+			'Free-lance',
+			"Différentes écoles chaque semaine à travers le Japon",
+			'Programmes intensifs de 3 à 5 jours',
+			'Lycée, groupes de 10 à 50 élèves',
+			'Former et coordonner les étudiants universitaires internationaux venant au Japon pour enseigner'
+		],
+		height: 940,
+		eduIcon: false,
+	},
+	{
+		title: 'Professeur adjoint d\'anglais',
+		employer: 'Oguhachiman Junior High School',
+		employerLink: 'https://www.aen.arakawa.tokyo.jp/OGUHACHIMAN-J/',
+		dates: '(4.2015-3.2016)',
+		tasks: ['22 leçons/semaine', '470 élèves, y compris groupe à besoins spéciaux'],
+		height: 1200,
+		eduIcon: false,
+	},
+	{
+		title: 'Engénieur Junior',
+		employer: 'Dessau (maintenant Stantec)',
+		employerLink: 'https://www.stantec.com/en',
+		dates: '(9.2012-10.2014)',
+		tasks: ['Conception de réseaux électriques et télécoms', 'Conception de poteaux électriques et de regards', 'Dessins de plans sur AutoCAD'],
+		height: 1430,
+		eduIcon: false,
+	},
+	{
+		title: 'Baccalauréat en génie civil',
+		employer: 'Université McGill',
+		employerLink: 'https://www.mcgill.ca/',
+		dates: '(9.2007 - 4.2012)',
+		height: 1700,
+		eduIcon: true,
+	},
+	{
+		title: 'Stagiaire en Infrastructure',
+		employer: 'AMT (maintenant EXO)',
+		employerLink: 'https://exo.quebec/en',
+		dates: '(5.2010-4.2011)',
+		tasks: ['Dessins de plan sur AutoCAD', 'Automatisation de saisie de données', 'Arpentage', 'Spécifications techniques', 'Évaluation de la consommation Énergétique'],
+		height: 1900,
+		eduIcon: false,
+	},
+]
 
 const experiencesEN: ExperienceDetailsProps[] = [
 	{
-		title: '1st full-stack portfolio project',
+		title: 'First full-stack portfolio project',
 		employer: 'mygrocerylists.netlify.app',
 		employerLink: 'https://mygrocerylists.netlify.app',
 		height: 0,

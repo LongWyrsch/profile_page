@@ -11,7 +11,7 @@ const Skills = () => {
 	const theme = useTheme()
 	return (
 		<div className={styles.skillsContainer}>
-			<Title title="Skills"></Title>
+			<Title title={t('skills')}></Title>
 			<div className={styles.topRow}>
 				<div><Icon icon='logos:visual-studio-code' className={styles.tech}/>VSCode</div>
 				<div><Icon icon='vscode-icons:file-type-git' className={styles.tech}/>GIT</div>

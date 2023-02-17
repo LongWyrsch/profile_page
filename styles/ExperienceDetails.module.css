@@ -1,0 +1,40 @@
+.discard {
+    display: none;
+}
+
+
+.topCard {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: black;
+    transition: 200ms ease;
+}
+
+.shadow {
+    position: absolute;
+    /* top: 5px; */
+    /* left: 4px; */
+    top: 4px;
+    left: 6px;
+    height: 100%;
+    width: 97%;
+    background-color: black;
+    z-index: -1;
+    transition: 200ms ease;
+}
+
+.wrapper:hover > div.topCard:nth-child(2) {
+    top: -3px !important;
+    left: 3px !important;
+
+}
+
+.wrapper:hover > div.shadow:nth-child(3) {
+    /* top: 7px !important; */
+    /* left: 2px !important; */
+    top: 7px !important;
+    left: 3px !important;
+}

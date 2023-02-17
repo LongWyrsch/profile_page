@@ -5,6 +5,7 @@ import Image from 'next/image'
 import grocerylists from 'public/grocerylists.png'
 import { Icon } from '@iconify/react'
 import { Button, useTheme } from '@mui/material'
+import styles from 'styles/Portfolio.module.css'
 
 const Portfolio = () => {
 
@@ -19,9 +20,9 @@ const Portfolio = () => {
 					<b>{t('look')} </b>
 					<a href="http://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Button variant='contained' style={{borderRadius: '20px'}}>{t('app')}</Button></a>
                 
-                    <div style={{position: 'relative', marginTop: '20px'}}>
-						<a href="http://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Image alt="app screenshot" src={grocerylists} width={400} style={{position: 'relative', zIndex: 2}}/></a>
-                        <div style={{width: '400px', height: '219px', backgroundColor: theme.tones.neutral[50], position: 'absolute', top: 10, left: 25}}></div>
+                    <div className={styles.wrapper} style={{position: 'relative', marginTop: '20px'}}>
+						<a className={styles.topCard} href="http://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Image alt="app screenshot" src={grocerylists} width={400} style={{position: 'relative', zIndex: 2}}/></a>
+                        <div className={styles.shadow} style={{width: '400px', height: '219px', backgroundColor: theme.tones.neutral[50]}}></div>
                     </div>
 				</div>
 			</div>

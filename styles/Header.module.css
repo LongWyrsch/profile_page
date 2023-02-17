@@ -39,10 +39,10 @@
     flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
+    max-width: 670px;
 }
 
 .name {
-    font-size: 4rem;
     white-space: pre;
     color: white;
     display: flex;
@@ -51,11 +51,7 @@
 
 .highlight {
     position: absolute;
-    top: 45px;
-    left: 195px;
     z-index: -1;
-    height: 38px;
-    width: 400px;
     background-color: grey;
 }
 

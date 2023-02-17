@@ -1,0 +1,126 @@
+.experienceWrapper {
+    margin-top: 100px;
+}
+
+.timelineContainer {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 70px 0;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+
+.year {
+    height: 138px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline > .year:nth-last-child(-n + 3) {
+    height: 35px;
+}
+
+.spans1 {
+    left: 90px;
+}
+.spans2 {
+    left: 120px;
+}
+
+.spans1,
+.spans2 {
+    position: absolute;
+}
+
+
+.spans1 > div,
+.spans2 > div { 
+    width: 18px;
+    position: absolute;
+}
+
+
+.moveGermany, 
+.moveJapan {
+    display: flex;
+    align-items: center;
+    min-width: 600px !important;
+}
+
+.moveGermany {
+    top: 745px;
+    left: -8px;
+}
+.moveJapan {
+    top: 1300px;
+    left: -8px;
+}
+
+.spanGrocery{
+    top: 120px;
+    height: 40px;
+}
+.spanCodecademy{
+    top: 165px;
+    height: 85px;
+}
+.spanNichias{
+    top: 255px;
+    height: 430px;
+}
+.spanCadida{
+    top: 690px;
+    height: 50px;
+}
+.spanISA{
+    top: 785px;
+    height: 470px;
+}
+.spanDessau{
+    top: 1340px;
+    height: 290px;
+}
+.spanMcgill{
+    top: 1690px;
+    height: 430px;
+}
+.spanKokusai{
+    top: 830px;
+    height: 150px;
+}
+.spanOguhachiman{
+    top: 1120px;
+    height: 150px;
+}
+.spanAmt{
+    top: 1800px;
+    height: 160px;
+}
+
+
+.experiences {
+    position: relative;
+    width: 100%;
+}
+
+.experiences > * {
+    right: 100px;
+    width: 500px;
+}
+
+.highlight {
+    height: 40px;
+    width: 350px;
+    position: absolute;
+    top: 585px;
+    right: 260px;
+    z-index: -1;
+}

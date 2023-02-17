@@ -31,7 +31,7 @@
 .bottomRow > div > *.tech:nth-child(1) {
     height: 70px;
     width: 70px;
-    transition: 200ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
 
 .topRow > div > *.tech:nth-child(1):hover,

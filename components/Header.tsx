@@ -6,14 +6,26 @@ import { Button, IconButton, Tooltip, useTheme } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import DownloadIcon from '@mui/icons-material/Download'
 import { Icon } from '@iconify/react'
+import { useRouter } from 'next/router'
 
 const Header = () => {
 	const theme = useTheme()
 	const { t } = useTranslation('common')
+	const {locale} = useRouter()
 
 	const copyText = () => {
 		navigator.clipboard.writeText('long.nqw@gmail.com')
 	}
+
+	let nameHighlightPosition = {
+		left: locale==='en'? '195px' : locale==='de'? '290px' : '295px',
+		top: locale==='en'? '45px' : locale==='de'? '60px' : '60px',
+		height: locale==='en'? '38px' : locale==='de'? '25px' : '25px',
+		width: locale==='en'? '440px' : locale==='de'? '330px' : '330px'
+	} 
+
+	const tooltipText = `long.nqw@gmail.com
+	Click to copy!`
 
 	return (
 		<div className={styles.headerContainer}>
@@ -22,8 +34,8 @@ const Header = () => {
 				<div className={styles.shadow} style={{ backgroundColor: theme.tones.neutral[50] }}></div>
 			</div>
 			<div className={styles.rightSide}>
-				<div className={styles.name}>{t('hi')} <b>{t('long')}</b>.</div>
-                <div className={styles.highlight}></div>
+				<div className={styles.name} style={{fontSize: locale==='en'? '4rem': '3rem'}}>{t('hi')} <b>{t('long')}</b>.</div>
+                <div className={styles.highlight} style={nameHighlightPosition}></div>
 				<div className={styles.buttons}>
 					<div className={styles.leftButtons}>
 						<div className={styles.developer}>{t('dev')}</div>
@@ -44,7 +56,7 @@ const Header = () => {
 								<Icon icon="mdi:linkedin" className={styles.icon2} />
 							</IconButton>
 						</a>
-						<Tooltip title="Click to copy!" arrow >
+						<Tooltip title={<div style={{textAlign:'center'}}>long.nqw@gmail.com<br/>{t('copy')}</div>} arrow >
 							<IconButton className={styles.iconButton} onClick={copyText}>
 								<Icon icon="logos:google-gmail" className={styles.icon3}  />
 							</IconButton>

@@ -1,0 +1,23 @@
+.topCard{
+    position: relative;
+    transition: 200ms ease;
+    top: 0px;
+    left: 0px;
+}
+
+.shadow{
+    position: absolute;
+    transition: 200ms ease;
+    top: 5px;
+    left: 30px;
+}
+
+.wrapper:hover > a.topCard{
+    top:-3px;
+    left:3px;
+}
+
+.wrapper:hover > div.shadow{
+    top:8px;
+    left:27px;
+}

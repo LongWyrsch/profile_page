@@ -18,10 +18,10 @@ const Portfolio = () => {
 			<div style={{ display: 'flex', gap: '80px' }}>
 				<div style={{ marginTop: '40px', textAlign: 'center', whiteSpace: 'pre', fontSize: '1.5rem', margin: '0 auto' }}>
 					<b>{t('look')} </b>
-					<a href="http://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Button variant='contained' style={{borderRadius: '20px'}}>{t('app')}</Button></a>
+					<a href="https://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Button variant='contained' style={{borderRadius: '20px'}}>{t('app')}</Button></a>
                 
                     <div className={styles.wrapper} style={{position: 'relative', marginTop: '20px'}}>
-						<a className={styles.topCard} href="http://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Image alt="app screenshot" src={grocerylists} width={400} style={{position: 'relative', zIndex: 2}}/></a>
+						<a className={styles.topCard} href="https://mygrocerylists.netlify.app"  rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}><Image alt="app screenshot" src={grocerylists} width={400} style={{position: 'relative', zIndex: 2}}/></a>
                         <div className={styles.shadow} style={{width: '400px', height: '219px', backgroundColor: theme.tones.neutral[50]}}></div>
                     </div>
 				</div>

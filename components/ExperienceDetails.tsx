@@ -119,7 +119,7 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 				)}
 				{employerLink.includes('grocerylists') && (
 					<div style={{ position: 'relative' }}>
-						<a href="http://mygrocerylists.netlify.app" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
+						<a href="https://mygrocerylists.netlify.app" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
 							<Image alt="app screenshot" src={grocerylists} width={150} style={{ position: 'relative', zIndex: 2 }} />
 						</a>
 						<div style={{ width: '150px', height: '82px', backgroundColor: theme.tones.neutral[50], position: 'absolute', top: '7px', left: '-5px' }}></div>

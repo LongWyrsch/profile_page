@@ -78,7 +78,6 @@ const Experience = () => {
 	const { locale } = useRouter()
 
 	const years = Array.from({ length: 17 }, (_, i) => 2023 - i)
-	const detailHeight = [0, 0, 0, 0, 0, 0, 0]
 
 	const experiences = locale === 'en' ? experiencesEN : locale === 'de' ? experiencesDE : experiencesFR
 

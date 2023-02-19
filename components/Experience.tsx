@@ -214,7 +214,7 @@ const experiencesDE: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Naturwissenschafs/Englisch-Lherer',
+		title: 'Naturwissenschafs/Englisch-Lehrer',
 		employer: 'ISA',
 		employerLink: 'https://www.isa.co.jp/',
 		dates: '(6.2015-8.2018)',

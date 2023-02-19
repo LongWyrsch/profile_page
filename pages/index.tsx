@@ -41,7 +41,6 @@ export default function Home() {
 
 	const { t } = useTranslation('common')
 
-
 	return (
 		<>
 			<Head>
@@ -66,7 +65,7 @@ export default function Home() {
 					<LanguagePicker />
 				</div>
 				<div className={styles.resumeContainer}>
-					<Header/>
+					<Header />
 					<div className={styles.profileLanguagesEducation}>
 						<Profile />
 						<Languages />
@@ -79,8 +78,8 @@ export default function Home() {
 					</div>
 				</div>
 				<div className={styles.resumeContainer}>
-					<Skills/>
-					<Experience/>
+					<Skills />
+					<Experience />
 				</div>
 			</main>
 		</>

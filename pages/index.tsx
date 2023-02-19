@@ -59,7 +59,7 @@ export default function Home() {
 					</span>
 				</div>
 				<div className={styles.languageTheme}>
-					<IconButton onClick={colorMode.toggleColorMode} color="secondary" className={styles.themeToggle}>
+					<IconButton onClick={colorMode.toggleColorMode} color="secondary" className={styles.themeToggle} sx={{color: 'white', backgroundColor: '#535353'}}>
 						{theme.palette.mode === 'dark' ? <Icon icon="ion:moon" style={{ width: '30', height: '30' }} /> : <Icon icon="heroicons-solid:sun" style={{ width: '30', height: '30' }} />}
 					</IconButton>
 					<LanguagePicker />

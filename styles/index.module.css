@@ -43,11 +43,6 @@
     color: inherit;
 }
 
-.themeToggle {
-    color: white;
-    background-color: #535353;
-}
-
 .languageTheme {
     position: absolute;
     top: 30px;

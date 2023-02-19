@@ -90,12 +90,6 @@
     text-decoration: none;
 }
 
-.pdf {
-    border-radius: 20px;
-    text-transform:none;
-    width:fit-content
-}
-
 .rightButtons {
     width: 40%;
     display: flex;
@@ -132,9 +126,3 @@
     margin-right: 5px;
 }
 
-
-.iconButton {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-}

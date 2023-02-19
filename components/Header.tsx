@@ -45,24 +45,24 @@ const Header = () => {
 					<div className={styles.leftButtons}>
 						<div className={styles.developer}>{t('dev')}</div>
 						<a href="https://drive.google.com/file/d/1yS-VyxTiM-EdUtm751Gmc44D2l1WrepK/view?usp=share_link" rel="noopener noreferrer" target="_blank">
-							<Button variant="contained" startIcon={<DownloadIcon />} endIcon={<Icon icon="vscode-icons:file-type-pdf2" />} className={styles.pdf} color="secondary">
+							<Button variant="contained" startIcon={<DownloadIcon />} endIcon={<Icon icon="vscode-icons:file-type-pdf2" />} className={styles.pdf} color="secondary" sx={{borderRadius: '20px', textTransform: 'none', width: 'fit-content'}}>
 								{t('resume')}
 							</Button>
 						</a>
 					</div>
 					<div className={styles.rightButtons}>
 						<a href="https://github.com/LongWyrsch" rel="noopener noreferrer" target="_blank">
-							<IconButton className={styles.iconButton}>
+							<IconButton sx={{height: '50px', width: '50px', padding: '0'}}>
 								<Icon icon="mdi:github" className={styles.icon1} style={{ color: theme.materialDesign.onBackground }} />
 							</IconButton>
 						</a>
 						<a href="https://de.linkedin.com/in/long-wyrsch-9141a156?original_referer=" rel="noopener noreferrer" target="_blank">
-							<IconButton className={styles.iconButton}>
+							<IconButton sx={{height: '50px', width: '50px', padding: '0'}}>
 								<Icon icon="mdi:linkedin" className={styles.icon2} />
 							</IconButton>
 						</a>
 						<Tooltip title={<div style={{textAlign:'center'}}>long.nqw@gmail.com<br/>{t('copy')}</div>} arrow >
-							<IconButton className={styles.iconButton} onClick={copyText}>
+							<IconButton onClick={copyText} sx={{height: '50px', width: '50px', padding: '0'}}>
 								<Icon icon="logos:google-gmail" className={styles.icon3}  />
 							</IconButton>
 						</Tooltip>

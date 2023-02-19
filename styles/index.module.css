@@ -15,10 +15,8 @@
     }
 }
 
-
-
 .bannerContainer {
-    height: 40vh;
+    height: 380px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -54,7 +52,7 @@
 }
 
 main .resumeContainer:nth-child(3) {
-    margin-top: 29vh !important;
+    margin-top: 275px !important;
 }
 
 .resumeContainer {

@@ -92,7 +92,7 @@ const Experience = () => {
 	const { ref: ref9 } = useParallax<HTMLDivElement>({ startScroll: 2778, endScroll: 2940, shouldAlwaysCompleteAnimation: true, scaleX: [0, 1], translateX: [-50, 0] })
 	const { ref: ref10 } = useParallax<HTMLDivElement>({ startScroll: 2955, endScroll: 3153, shouldAlwaysCompleteAnimation: true, scaleX: [0, 1], translateX: [-50, 0] })
 
-	const { ref: cadidaRef, inView: cadidaIsVisible } = useInView({ threshold: 1, rootMargin: '0px 0px -100px 0px', triggerOnce: true }) //, triggerOnce: true
+	const { ref: cadidaRef, inView: cadidaIsVisible } = useInView({ threshold: 1, rootMargin: '0px 0px -150px 0px', triggerOnce: true }) //, triggerOnce: true
 
 	const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -197,7 +197,7 @@ const experiencesDE: ExperienceDetailsProps[] = [
 		employer: 'Cadida Software',
 		employerLink: 'https://www.cadida.de/',
 		dates: '(11.2018 - 2.2019)',
-		tasks: ['C#, XML', 'IOS App-Entwicklung für das iPad'],
+		tasks: ['C#, XML', 'IOS App-Entwicklung mit Xamarin'],
 		height: 590,
 		eduIcon: false,
 	},
@@ -214,7 +214,7 @@ const experiencesDE: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Lehrer für Naturwissenschaften/Englisch Camp',
+		title: 'Naturwissenschafs/Englisch-Lherer',
 		employer: 'ISA',
 		employerLink: 'https://www.isa.co.jp/',
 		dates: '(6.2015-8.2018)',
@@ -253,7 +253,7 @@ const experiencesDE: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Bachelor in Bauingenieurwesen',
+		title: 'Bachelor Bauingenieurwesen',
 		employer: 'McGill University',
 		employerLink: 'https://www.mcgill.ca/',
 		dates: '(9.2007 - 4.2012)',
@@ -287,7 +287,7 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Cours d\'ingénierie Full-Stack',
+		title: 'Cours d\'Ingénierie Full-Stack',
 		employer: 'Codecademy',
 		employerLink: 'https://join.codecademy.com/learn/paths/full-stack-engineer-career-path/',
 		dates: '(4.2022 - 11.2022)',
@@ -295,11 +295,11 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: true,
 	},
 	{
-		title: 'Ingénieur en conception automobile',
+		title: 'Ingénieur de Conception',
 		employer: 'Nichias',
 		employerLink: 'https://www.nichiascorp.com/nichias-E/',
 		dates: '(4.2019 - 3.2022)',
-		tasks: ['Conception de joints secondaires automobiles avec Creo', 'Impliquation dans le processus d\'appel d\'offres', 'Rencontres avec le client sur les itérations de conception'],
+		tasks: ['Conception de joints secondaires automobiles avec Creo', 'Impliqué dans le processus d\'appel d\'offres', 'Réunions avec les clients sur les itérations de conception'],
 		height: 350,
 		eduIcon: false,
 	},
@@ -322,7 +322,7 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Professeur de camps de science et d\'anglais',
+		title: 'Professeur de Science et d\'Anglais',
 		employer: 'ISA',
 		employerLink: 'https://www.isa.co.jp/',
 		dates: '(6.2015-8.2018)',
@@ -337,7 +337,7 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Professeur adjoint d\'anglais',
+		title: 'Professeur Adjoint d\'Anglais',
 		employer: 'Oguhachiman Junior High School',
 		employerLink: 'https://www.aen.arakawa.tokyo.jp/OGUHACHIMAN-J/',
 		dates: '(4.2015-3.2016)',
@@ -346,16 +346,16 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Engénieur Junior',
+		title: 'Ingénieur Junior',
 		employer: 'Dessau (maintenant Stantec)',
 		employerLink: 'https://www.stantec.com/en',
 		dates: '(9.2012-10.2014)',
-		tasks: ['Conception de réseaux électriques et télécoms', 'Conception de poteaux électriques et de regards', 'Dessins de plans sur AutoCAD'],
+		tasks: ['Conception de réseaux électriques et télécoms', 'Conception de poteaux électriques et regards', 'Dessins de plans sur AutoCAD'],
 		height: 1430,
 		eduIcon: false,
 	},
 	{
-		title: 'Baccalauréat en génie civil',
+		title: 'Baccalauréat en Génie Civil',
 		employer: 'Université McGill',
 		employerLink: 'https://www.mcgill.ca/',
 		dates: '(9.2007 - 4.2012)',
@@ -363,7 +363,7 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		eduIcon: true,
 	},
 	{
-		title: 'Stagiaire en Infrastructure',
+		title: 'Stagiaire Infrastructure',
 		employer: 'AMT (maintenant EXO)',
 		employerLink: 'https://exo.quebec/en',
 		dates: '(5.2010-4.2011)',
@@ -390,7 +390,7 @@ const experiencesEN: ExperienceDetailsProps[] = [
 		eduIcon: true,
 	},
 	{
-		title: 'Automotive Design Engineer',
+		title: 'Design Engineer',
 		employer: 'Nichias',
 		employerLink: 'https://www.nichiascorp.com/nichias-E/',
 		dates: '(4.2019 - 3.2022)',
@@ -403,7 +403,7 @@ const experiencesEN: ExperienceDetailsProps[] = [
 		employer: 'Cadida Software',
 		employerLink: 'https://www.cadida.de/',
 		dates: '(11.2018 - 2.2019)',
-		tasks: ['C#, XML', 'IOS app development using Xamarin'],
+		tasks: ['C#, XML', 'IOS app development with Xamarin'],
 		height: 590,
 		eduIcon: false,
 	},
@@ -417,7 +417,7 @@ const experiencesEN: ExperienceDetailsProps[] = [
 		eduIcon: false,
 	},
 	{
-		title: 'Science/English Camp Teacher',
+		title: 'Science & English Teacher',
 		employer: 'ISA',
 		employerLink: 'https://www.isa.co.jp/',
 		dates: '(6.2015-8.2018)',

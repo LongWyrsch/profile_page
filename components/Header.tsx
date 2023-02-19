@@ -1,5 +1,5 @@
 import React, { Ref } from 'react'
-import headshot from 'public/headshot.jpeg'
+import headshot from 'public/headshot2_compressed.jpeg'
 import styles from 'styles/Header.module.css'
 import Image from 'next/image'
 import { Button, IconButton, Tooltip, useTheme } from '@mui/material'
@@ -32,11 +32,17 @@ const Header = () => {
 	const tooltipText = `long.nqw@gmail.com
 	Click to copy!`
 
+	let cvLink = locale==='en'
+		? 'https://drive.google.com/file/d/161NYxC0P6AcEPlg3b4yERLg_m57_rZgU/view?usp=share_link' 
+		: locale==='de'
+			? 'https://drive.google.com/file/d/1x6OD16jAhkpSx3qBKacA6J_K5u1Pu1XC/view?usp=share_link' 
+			: 'https://drive.google.com/file/d/1c-A4KKcINsGfRB7t5u0ZWUuh6dTqXwbm/view?usp=share_link'
+
 	return (
 		<div className={styles.headerContainer}>
 			<div className={styles.headshotContainer}>
 				<Image src={headshot} alt="headshot" className={styles.headshot} />
-				<div className={styles.shadow} style={{ backgroundColor: theme.tones.neutral[50] }}></div>
+				{/* <div className={styles.shadow} style={{ backgroundColor: theme.tones.neutral[50] }}></div> */}
 			</div>
 			<div className={styles.rightSide}>
 				<div className={styles.name} style={{fontSize: locale==='en'? '4rem': '3rem'}}>{t('hi')} <b>{t('long')}</b></div>
@@ -44,7 +50,7 @@ const Header = () => {
 				<div className={styles.buttons}>
 					<div className={styles.leftButtons}>
 						<div className={styles.developer}>{t('dev')}</div>
-						<a href="https://drive.google.com/file/d/1yS-VyxTiM-EdUtm751Gmc44D2l1WrepK/view?usp=share_link" rel="noopener noreferrer" target="_blank">
+						<a href={cvLink} rel="noopener noreferrer" target="_blank">
 							<Button variant="contained" startIcon={<DownloadIcon />} endIcon={<Icon icon="vscode-icons:file-type-pdf2" />} className={styles.pdf} color="secondary" sx={{borderRadius: '20px', textTransform: 'none', width: 'fit-content'}}>
 								{t('resume')}
 							</Button>

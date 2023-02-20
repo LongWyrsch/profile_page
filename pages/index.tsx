@@ -66,6 +66,7 @@ export default function Home() {
 				</div>
 				<div className={styles.resumeContainer}>
 					<Header />
+					<div>{t('about')}</div>
 					<div className={styles.profileLanguagesEducation}>
 						<Profile />
 						<Languages />

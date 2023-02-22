@@ -148,14 +148,14 @@ const Experience = () => {
 				<div ref={ref1} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '599px', top: '130px' }}></div>
 				<div ref={ref2} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '590px', top: '230px' }}></div>
 				<div ref={ref3} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '599px', top: '420px' }}></div>
-				<div ref={ref4} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '599px', top: '700px' }}></div>
+				<div ref={ref4} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '590px', top: '700px' }}></div>
 				<div ref={ref5} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '138px', right: '599px', top: '850px' }}></div>
 				<div ref={ref6} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '599px', top: '1050px' }}></div>
 				<div ref={ref7} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '138px', right: '599px', top: '1230px' }}></div>
 				<div ref={ref8} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '599px', top: '1500px' }}></div>
 				<div ref={ref9} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '108px', right: '590px', top: '1750px' }}></div>
 				<div ref={ref10} style={{ border: `1px solid ${theme.materialDesign.onBackground}`, position: 'absolute', left: '138px', right: '599px', top: '1930px' }}></div>
-				<div ref={cadidaRef} className={styles.highlight} style={{ backgroundColor: theme.materialDesign.secondaryContainer, opacity: cadidaIsVisible ? 1 : 0, transition: '3000ms' }}></div>
+				{/* <div ref={cadidaRef} className={styles.highlight} style={{ backgroundColor: theme.materialDesign.secondaryContainer, opacity: cadidaIsVisible ? 1 : 0, transition: '3000ms' }}></div> */}
 			</div>
 		</div>
 	)
@@ -198,7 +198,7 @@ const experiencesDE: ExperienceDetailsProps[] = [
 		employerLink: 'https://www.cadida.de/',
 		dates: '(11.2018 - 2.2019)',
 		tasks: ['C#, XML', 'IOS App-Entwicklung mit Xamarin'],
-		height: 590,
+		height: 560,
 		eduIcon: false,
 	},
 	{
@@ -309,7 +309,7 @@ const experiencesFR: ExperienceDetailsProps[] = [
 		employerLink: 'https://www.cadida.de/',
 		dates: '(11.2018 - 2.2019)',
 		tasks: ['C#, XML', 'Développement d\'applications IOS avec Xamarin'],
-		height: 590,
+		height: 560,
 		eduIcon: false,
 	},
 	{
@@ -404,7 +404,7 @@ const experiencesEN: ExperienceDetailsProps[] = [
 		employerLink: 'https://www.cadida.de/',
 		dates: '(11.2018 - 2.2019)',
 		tasks: ['C#, XML', 'IOS app development with Xamarin'],
-		height: 590,
+		height: 560,
 		eduIcon: false,
 	},
 	{

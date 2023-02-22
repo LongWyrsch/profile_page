@@ -24,12 +24,12 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 	const theme = useTheme()
 
 	const topCard = {
-		backgroundColor: employer.includes('McGill') ? theme.materialDesign.tones.neutral[95] : employer.includes('Codecademy') ? theme.tones.secondary[95] : 'none',
-		color: employer.includes('McGill') ? theme.materialDesign.onBackground : employer.includes('Codecademy') ? 'black' : 'none',
-		border: employer.includes('McGill') || employer.includes('Codecademy') ? `1px solid ${theme.tones.neutral[30]}` : 'none',
+		backgroundColor: employer.includes('McGill') ? theme.materialDesign.tones.neutral[95] : employer.includes('Codecademy') || employer.includes('Cadida') ? theme.tones.secondary[95] : 'none',
+		color: employer.includes('McGill') ? theme.materialDesign.onBackground : employer.includes('Codecademy') || employer.includes('Cadida') ? 'black' : 'none',
+		border: employer.includes('McGill') || employer.includes('Codecademy') || employer.includes('Cadida') ? `1px solid ${theme.tones.neutral[30]}` : 'none',
 	}
 
-	const { ref: experienceRef, inView: experienceIsVisible } = useInView({ threshold: 1, rootMargin: '0px 0px -50px 0px', triggerOnce: true }) //, triggerOnce: true
+	const { ref: experienceRef, inView: experienceIsVisible } = useInView({ threshold: 1, rootMargin: '0px 0px 0px 0px', triggerOnce: true }) //, triggerOnce: true
 
 	const hoverContext = useContext(HoverContext)
 
@@ -43,9 +43,9 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 	return (
 		<div style={{ display: 'flex', position: 'absolute', top: height }} className={`${styles.wrapper} ${experienceIsVisible && styles.visible}`} ref={experienceRef} onMouseEnter={enterHandler} onMouseLeave={leaveHandler}>
 			<div
-				style={{ minHeight: '100%', marginRight: '10px', border: !employer.includes('McGill') && !employer.includes('Codecademy') ? `1px solid ${theme.materialDesign.onSurface}` : 'none' }}
+				style={{ minHeight: '100%', marginRight: '10px', border: !employer.includes('McGill') && !employer.includes('Codecademy') && !employer.includes('Cadida') ? `1px solid ${theme.materialDesign.onSurface}` : 'none' }}
 			></div>
-			<div className={employer.includes('McGill') || employer.includes('Codecademy') ? styles.topCard : ''} style={topCard}>
+			<div className={employer.includes('McGill') || employer.includes('Codecademy') || employer.includes('Cadida') ? styles.topCard : ''} style={topCard}>
 				<div style={{ display: 'flex' }}>
 					{eduIcon && <Icon icon="zondicons:education" width={30} style={{ marginRight: '10px' }} />}
 					<div>
@@ -126,7 +126,7 @@ const ExperienceDetails = ({ title, employer, employerLink, dates, tasks, height
 					</div>
 				)}
 			</div>
-			<div className={employer.includes('McGill') || employer.includes('Codecademy') ? styles.shadow : styles.discard} style={{ backgroundColor: theme.tones.neutral[30] }}></div>
+			<div className={employer.includes('McGill') || employer.includes('Codecademy') || employer.includes('Cadida') ? styles.shadow : styles.discard} style={{ backgroundColor: theme.tones.neutral[30] }}></div>
 		</div>
 	)
 }
